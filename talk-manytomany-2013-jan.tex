@@ -29,22 +29,10 @@
 \frame {}
 
 \frame {
-    Uncommon things
-
-    \vskip 1em
-
-    \begin{itemize}
-        \item "Oh that's interesting"
-        \item Uncommon vs. should be common
-    \end{itemize}
-}
-
-\frame {}
-
-\frame {
     Thread.com history redux
 
     \vskip 1em
+    \pause
 
     \begin{itemize}
         \item Playfire.com, social networking site for gamers
@@ -54,6 +42,20 @@
         \end{itemize}
         \item Acquired May 2012
         \item YCombinator S12
+    \end{itemize}
+}
+
+\frame {}
+
+\frame {
+    Uncommon things
+
+    \vskip 1em
+    \pause
+
+    \begin{itemize}
+        \item "Oh that's interesting"
+        \item Uncommon != should be common
     \end{itemize}
 }
 
@@ -72,9 +74,13 @@
 \frame {
     \begin{itemize}
         \item For visibility, not auditing
-        \item We put important events in our main channel, everything else in "Pulse"
+        \pause
+        \item Important events in main channel, everything else in "Pulse"
+        \pause
         \item History for free
+        \pause
         \item Any chat technology can work
+        \pause
         \item \url{https://github.com/thread/django-hipchat}
     \end{itemize}
 }
@@ -96,7 +102,7 @@
 }
 
 \frame {
-    Outline
+    Basic Debian deployment
 
     \vskip 1em
 
@@ -114,12 +120,16 @@
 
     \begin{itemize}
         \item Can happily work with system packages
+        \pause
         \item Many tasks already done for you very well (debhelper)
+        \pause
         \item Easy to make modular system
+        \pause
         \item Can change a machine's purpose cleanly without reimaging
+        \pause
         \item Can distribute packages centrally with APT
-        \item Can scale up to very complicated setups (APT/{\tt dak}/{\tt mini-dinstall})
-
+        \pause
+        \item Can scale up to very complicated setups ({\tt dak}/{\tt mini-dinstall})
     \end{itemize}
 }
 
@@ -130,14 +140,17 @@
 
     \begin{itemize}
         \item Versions in distribution may be old
+        \pause
         \item Requires distribution-specific knowledge
+        \pause
         \item Inherits all Debian legacy packaging quirks
+        \pause
         \item Installing standalone packages with {\tt dpkg} problematic
     \end{itemize}
 }
 
 \frame {
-    Example Thread.com deployment (Jenkins)
+    Example Thread.com deployment (with Jenkins)
     \vskip 1em
     \includegraphics[width=100mm]{img/debian-deploy.png}
 }
@@ -169,12 +182,11 @@
     \vskip 1em
 
     \begin{itemize}
-        \item Allow login link to any URL
-        \item Simple to use - can be added anywhere
+        \item Allow login link to any URL - can be added anywhere
+        \pause
         \item Salted HMAC implementation - no state
-        \item Token includes timestamp so tokens expire
-        \item Customisable salt fields - (default: {\tt User.password})
         \item Tokens can be re-used (feature)
+        \pause
         \item \url{https://github.com/playfire/django-autologin}
     \end{itemize}
 }
@@ -186,7 +198,9 @@
 
     \begin{itemize}
         \item Salt the HMAC with the user's hashed password
+        \pause
         \item Include the timestamp in the hash, not the expiry time
+        \pause
         \item Add "Click here to login" copy (aka "The forward problem")
     \end{itemize}
 }
@@ -208,10 +222,13 @@
     \vskip 1em
 
     \begin{itemize}
-        \item New features can save developer time
-        \item Never complaining about missing features
-        \item Security features often nice to have
-        \item Increases incentive to send patches upstream
+        \item Can save developer time
+        \pause
+        \item No complaining about missing features
+        \pause
+        \item Security features
+        \pause
+        \item Incentive to send patches upstream
     \end{itemize}
 }
 
@@ -222,10 +239,12 @@
 
     \begin{itemize}
         \item It breaks!
-        \item 99\% of the time it breaks your libraries
+        \pause
+        \item 99\% of the time it actually breaks your libraries
     \end{itemize}
 
     \vskip 1em
+    \pause
 
     Nightmare mode: Git HEAD of your language runtime
 }
@@ -233,6 +252,7 @@
 \frame {}
 
 \frame {
+    \vskip 1em
     {\bf @lolamby}
 }
 
